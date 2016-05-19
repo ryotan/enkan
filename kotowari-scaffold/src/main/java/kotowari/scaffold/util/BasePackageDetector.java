@@ -46,7 +46,7 @@ public class BasePackageDetector {
 
     private static int packageDepth(String pkgName) {
         int cnt = 0, i = 0;
-        while ((i = pkgName.indexOf(".", i)) < -1) {
+        while ((i = pkgName.indexOf(".", i + 1)) > -1) {
             cnt++;
         }
         return cnt;
